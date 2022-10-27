@@ -1,5 +1,4 @@
 import 'package:ecampus/manager/loginmanager.dart';
-import 'package:ecampus/pages/qrpage.dart';
 import 'package:ecampus/pages/theme.dart';
 import 'package:ecampus/providers/provider.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +18,8 @@ class LoginPage extends StatelessWidget {
       children: [
         InkWell(
           onTap: () async {
-            loginManager.inCode.add(await Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const QRViewPage())));
+            // loginManager.inCode.add(await Navigator.of(context).push(
+            //     MaterialPageRoute(builder: (context) => const QRViewPage())));
           },
           child: Center(
             child: Container(

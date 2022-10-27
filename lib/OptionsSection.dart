@@ -27,10 +27,8 @@ class OptionsSection extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(20),
-                        primary: color2, // <-- Button color
-                        onPrimary: color3, // <-- Splash color
+                        foregroundColor: color3, backgroundColor: color2, shape: const CircleBorder(),
+                        padding: const EdgeInsets.all(20), // <-- Splash color
                       ),
                       child:
                           const Icon(Icons.house_outlined, color: Colors.white),
@@ -41,10 +39,8 @@ class OptionsSection extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(20),
-                        primary: color2, // <-- Button color
-                        onPrimary: color3, // <-- Splash color
+                        foregroundColor: color3, backgroundColor: color2, shape: const CircleBorder(),
+                        padding: const EdgeInsets.all(20), // <-- Splash color
                       ),
                       child: const Icon(Icons.coffee, color: Colors.white),
                     ),
@@ -54,10 +50,8 @@ class OptionsSection extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(),
-                        padding: const EdgeInsets.all(20),
-                        primary: color2, // <-- Button color
-                        onPrimary: color3, // <-- Splash color
+                        foregroundColor: color3, backgroundColor: color2, shape: const CircleBorder(),
+                        padding: const EdgeInsets.all(20), // <-- Splash color
                       ),
                       child: const Icon(Icons.sports_handball_outlined,
                           color: Colors.white),
@@ -68,10 +62,8 @@ class OptionsSection extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        shape: const CircleBorder(),
+                        foregroundColor: color3, backgroundColor: color2, shape: const CircleBorder(),
                         padding: const EdgeInsets.all(20),
-                        primary: color2,
-                        onPrimary: color3,
                       ),
                       child:
                           const Icon(Icons.info_outline, color: Colors.white),

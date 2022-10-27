@@ -35,7 +35,6 @@ class CompteService {
           headers: {"content-type": "application/json"});
       return Compte.fromJson(jsonDecode(content.body));
     } catch (e) {
-      print(e);
       return null;
     }
   }

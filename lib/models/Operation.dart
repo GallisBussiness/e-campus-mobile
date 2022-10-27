@@ -1,5 +1,3 @@
-import 'package:ecampus/models/Compte.dart';
-
 class Operation {
   final int id;
   final String date;

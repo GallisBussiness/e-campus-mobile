@@ -29,8 +29,6 @@ class LoginManager extends Manager {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       if (_codeSubject.hasValue && _passSubject.hasValue) {
-        print(_codeSubject.value);
-        print(_passSubject.value);
         Compte? compte =
             await CompteService.login(_codeSubject.value, _passSubject.value);
 
@@ -58,7 +56,7 @@ class LoginManager extends Manager {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       Compte? compte = await CompteService.login(
-          "36c60b42-45a0-4d6f-8a4e-a11526c9b516", "m98dd5pg8");
+          "95b28b00-2aa0-4a85-b103-c788454a017e", "gallis123");
       await prefs.setBool('isLogged', true);
       await prefs.setString('compte', jsonEncode(Compte.toJson(compte!)));
       btnController.reset();

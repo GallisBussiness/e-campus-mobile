@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:ecampus/models/Etudiant.dart';
 import 'package:ecampus/models/Operation.dart';
 
