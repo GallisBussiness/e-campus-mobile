@@ -21,5 +21,6 @@
     },
     "peacock.color": "#007fff",
     "dart.analyzerPath": null,
-    "dart.enableSdkFormatter": false
+    "dart.enableSdkFormatter": false,
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

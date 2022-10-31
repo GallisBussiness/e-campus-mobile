@@ -1,4 +1,5 @@
 import 'package:ecampus/manager/loginmanager.dart';
+import 'package:ecampus/pages/qrscanpage.dart';
 import 'package:ecampus/pages/theme.dart';
 import 'package:ecampus/providers/provider.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +19,8 @@ class LoginPage extends StatelessWidget {
       children: [
         InkWell(
           onTap: () async {
-            // loginManager.inCode.add(await Navigator.of(context).push(
-            //     MaterialPageRoute(builder: (context) => const QRViewPage())));
+                 String code =  await Navigator.of(context).push(MaterialPageRoute(builder: (context) => QrScanPage()));
+                 loginManager.inCode.add(code);
           },
           child: Center(
             child: Container(
@@ -60,16 +61,6 @@ class LoginPage extends StatelessWidget {
           onPressed: () => loginManager.login(context),
           child:
               const Text('LOGIN TO ECAMPUS!', style: TextStyle(color: color3)),
-        )),
-        const SizedBox(
-          height: 20,
-        ),
-        Center(
-            child: RoundedLoadingButton(
-          color: color2,
-          controller: loginManager.btnController,
-          onPressed: () => loginManager.direct(context),
-          child: const Text('ACCESS DIRECT', style: TextStyle(color: color3)),
         )),
         const SizedBox(
           height: 20,
