@@ -41,7 +41,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 gradient: LinearGradient(colors: [color2, color3])),
             child: Center(
               child: CircleAvatar(
-                backgroundImage: AssetImage("images/logo.png"),
+                backgroundImage: AssetImage("images/ecampus.png"),
                 backgroundColor: Colors.white,
                 radius: 50,
               ),

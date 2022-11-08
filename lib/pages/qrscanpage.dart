@@ -10,7 +10,7 @@ class QrScanPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Mobile Scanner'),
+          title: const Text('E-campus Scan QR'),
           actions: [
             IconButton(
               color: Colors.white,

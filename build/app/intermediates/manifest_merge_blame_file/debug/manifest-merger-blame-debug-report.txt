@@ -30,10 +30,10 @@
 22        android:name="android.app.Application"
 23        android:allowBackup="false"
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.6.0] C:\Users\CI\.gradle\caches\transforms-3\acbce933e4b464a5224ed377a62db1f5\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+24-->[androidx.core:core:1.8.0] C:\Users\CI\.gradle\caches\transforms-3\d363e3b5616f580c766e3e2b3c05f27d\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:hardwareAccelerated="true"
-27        android:icon="@mipmap/ic_launcher"
+27        android:icon="@mipmap/launcher_icon"
 28        android:label="ecampus" >
 29        <activity
 30            android:name="com.example.ecampus.MainActivity"

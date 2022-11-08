@@ -12,7 +12,7 @@ class Compte {
 
   factory Compte.fromJson(Map<String, dynamic> json) {
     List operation = json['operations'];
-    List<Operation> op = operation.map((o) => Operation.fromJson(o)).toList();
+    List<Operation> op = operation.reversed.map((o) => Operation.fromJson(o)).toList();
     return Compte(json['id'], json['solde'], json['code'],
         Etudiant.fromJson(json['etudiant']), op);
   }

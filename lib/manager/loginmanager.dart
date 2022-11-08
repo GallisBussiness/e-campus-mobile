@@ -52,30 +52,7 @@ class LoginManager extends Manager {
     }
   }
 
-  direct(context) async {
-    try {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      Compte? compte = await CompteService.login(
-          "95b28b00-2aa0-4a85-b103-c788454a017e", "gallis123");
-      await prefs.setBool('isLogged', true);
-      await prefs.setString('compte', jsonEncode(Compte.toJson(compte!)));
-      btnController.reset();
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const HomePage()));
-    } catch (e) {
-      const snackBar = SnackBar(
-        content: Text('Identifiants incorrect!',
-            style: TextStyle(
-              color: Colors.white,
-            )),
-        backgroundColor: Colors.red,
-      );
-
-      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      btnController.reset();
-    }
-  }
-
+ 
   updatePass(context, int id) async {
     String oldPass = _oldPassSubject.value;
     String newPass = _newPassSubject.value;

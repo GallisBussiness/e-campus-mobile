@@ -34,7 +34,7 @@ class TransactionsSection extends StatelessWidget {
                             color: color3,
                           ))
                       : const CircleAvatar(
-                          backgroundColor: color2,
+                          backgroundColor: Colors.yellow,
                           child: Icon(Icons.outbond, color: color3)),
                   subtitle: Text(
                       "${DateFormat.yMd().format(DateTime.parse(op.date))} à ${DateFormat.Hms().format(DateTime.parse(op.date))}",

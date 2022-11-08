@@ -45,6 +45,7 @@ class LoginPage extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 20),
           child: TextField(
               onChanged: loginManager.inPass.add,
+              obscureText: true,
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.security),
                   labelText: "Mot de passe",
@@ -60,7 +61,7 @@ class LoginPage extends StatelessWidget {
           controller: loginManager.btnController,
           onPressed: () => loginManager.login(context),
           child:
-              const Text('LOGIN TO ECAMPUS!', style: TextStyle(color: color3)),
+              const Text('SE CONNECTER', style: TextStyle(color: color3)),
         )),
         const SizedBox(
           height: 20,

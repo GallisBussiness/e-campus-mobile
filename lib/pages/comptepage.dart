@@ -3,6 +3,7 @@ import 'package:ecampus/QrSection.dart';
 import 'package:ecampus/TransactionsSection.dart';
 import 'package:ecampus/manager/comptemanager.dart';
 import 'package:ecampus/models/Compte.dart';
+import 'package:ecampus/pages/pubs.dart';
 import 'package:ecampus/providers/provider.dart';
 import 'package:ecampus/utils/observer.dart';
 import 'package:flutter/material.dart';
@@ -39,8 +40,10 @@ class ComptePage extends StatelessWidget {
                 ),
                 QrSection(compte: compte),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
+                Pubs(),
+                const SizedBox(height: 10,),
                 Expanded(
                   child: TransactionsSection(
                       compte: compte), //TransactionsSection()

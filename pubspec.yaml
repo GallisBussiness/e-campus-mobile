@@ -36,6 +36,8 @@ dependencies:
   shared_preferences: ^2.0.15
   mobile_scanner: ^2.0.0
   camera: ^0.10.0+4
+  audioplayers: ^1.1.1
+  audioplayer_web: 0.7.1
   curved_navigation_bar: ^1.0.3
 
   # The following adds the Cupertino Icons font to your application.
@@ -54,6 +56,31 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: "^0.10.0"
+  flutter_native_splash: ^2.2.13
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "images/ecampus.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "images/ecampus.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "images/ecampus.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: images/ecampus.png
+  android_12:
+    image: images/ecampus.png
+    icon_background_color: "#ffffff"
+    image_dark: images/ecampus.png
+    icon_background_color_dark: "#ffffff"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -68,6 +95,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
+    - assets/
     - images/avatars/
 
   # An image asset can refer to one or more resolution-specific "variants", see
