@@ -1,22 +1,26 @@
+import 'package:ecampus/models/Payement.dart';
+
 class Operation {
-  final int id;
+  final String id;
   final String date;
   final String type;
   final String description;
-  final double montant;
+  final Payement? payementsubject;
+  final int montant;
 
-  Operation(this.id, this.date, this.type, this.description, this.montant);
+  Operation(this.id, this.date, this.type, this.description, this.montant, this.payementsubject);
 
   Operation.fromJson(Map<String, dynamic> json)
-      : id = json['id'],
-        date = json['date'],
+      : id = json['_id'],
+        date = json['createdAt'],
         description = json['description'],
         montant = json['montant'],
-        type = json['type'];
+        type = json['type'],
+        payementsubject = json['payement_subject'] != null ? Payement.fromJson(json['payement_subject']) : null;
 
   static Map<String, dynamic> toJson(Operation operation) {
     return {
-      'id': operation.id,
+      '_id': operation.id,
       'date': operation.date,
       'description': operation.description,
       'montant': operation.montant,

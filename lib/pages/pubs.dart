@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecampus/audioplayer.dart';
 import 'package:ecampus/models/Pub.dart';
 import 'package:flutter/material.dart';
@@ -14,11 +15,22 @@ class Pubs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 5),
-      color: Colors.white,
-      child: AudioPub(pub: pubs[0]));
+   return CarouselSlider(
+  options: CarouselOptions(height: 100.0),
+  items: pubs.map((i) {
+    return Builder(
+      builder: (BuildContext context) {
+        return Container(
+          width: MediaQuery.of(context).size.width,
+          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+          decoration: const BoxDecoration(
+            color: Colors.amber
+          ),
+          child: AudioPub(pub: i),
+        );
+      },
+    );
+  }).toList(),
+);
   }
 }

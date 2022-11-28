@@ -17,7 +17,7 @@ class SocialManager extends Manager {
   Sink<String> get inMonth => _monthSubject.sink;
   Sink<int> get inBed => _bedSubject.sink;
 
-  pay(BuildContext context, int id) async {
+  pay(BuildContext context, String id) async {
     if (_bedSubject.hasValue && _monthSubject.hasValue) {
       bool v = await VirementService.paySocial(
           id, _bedSubject.value, _monthSubject.value, 3000);

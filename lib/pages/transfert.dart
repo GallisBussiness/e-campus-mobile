@@ -12,7 +12,7 @@ const color3 = Colors.white;
 class Transfert extends StatelessWidget {
   Transfert({Key? key, required this.currentId}) : super(key: key);
   final Key formKey = GlobalKey<FormState>();
-  final int currentId;
+  final String currentId;
   @override
   Widget build(BuildContext context) {
     TransfertManager transfertManager =

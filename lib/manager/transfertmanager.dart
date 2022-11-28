@@ -17,7 +17,7 @@ class TransfertManager extends Manager {
   Stream<int> get montant$ => _montant;
   Sink<int> get inMontant => _montant.sink;
 
-  submit(context, int id) async {
+  submit(context, String id) async {
     String nce = _nce.value;
     int montant = _montant.value;
     bool v = await VirementService.transfert(nce, id, montant);

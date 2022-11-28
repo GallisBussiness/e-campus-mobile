@@ -53,7 +53,7 @@ class LoginManager extends Manager {
   }
 
  
-  updatePass(context, int id) async {
+  updatePass(context, String id) async {
     String oldPass = _oldPassSubject.value;
     String newPass = _newPassSubject.value;
     try {

@@ -1,5 +1,6 @@
 import 'package:ecampus/manager/manager.dart';
 import 'package:ecampus/models/Compte.dart';
+import 'package:ecampus/models/Operation.dart';
 import 'package:ecampus/services/compteservice.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -12,8 +13,12 @@ class CompteManager extends Manager {
     return Stream.fromFuture(CompteService.getComptes());
   }
 
-  Stream<Compte> getCompte(int id) {
+  Stream<Compte> getCompte(String id) {
     return Stream.fromFuture(CompteService.getCompte(id));
+  }
+
+  Stream<List<Operation?>> getTransactions(String id) {
+    return Stream.fromFuture(CompteService.getTransactions(id));
   }
 
   Stream<List<Compte>> get $comptes => _getComptes();

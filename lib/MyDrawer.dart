@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({Key? key, required this.id}) : super(key: key);
-  final int id;
+  final String id;
   @override
   State<MyDrawer> createState() => _MyDrawerState();
 }

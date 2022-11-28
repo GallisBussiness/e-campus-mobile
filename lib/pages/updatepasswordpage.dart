@@ -7,7 +7,7 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 class UpdatePasswordPage extends StatelessWidget {
   UpdatePasswordPage({Key? key, required this.currentId}) : super(key: key);
   final Key formKey = GlobalKey<FormState>();
-  final int currentId;
+  final String currentId;
   @override
   Widget build(BuildContext context) {
     LoginManager loginManager = Provider.of(context).summon<LoginManager>();

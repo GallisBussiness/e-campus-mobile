@@ -7,7 +7,7 @@ import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class SocialPayement extends StatelessWidget {
   const SocialPayement({Key? key, required this.id}) : super(key: key);
-  final int id;
+  final String id;
   List<DropdownMenuItem<String>> get dropdownItems {
     List<DropdownMenuItem<String>> menuItems = const [
       DropdownMenuItem(value: "JANVIER", child: Text("JANVIER")),

@@ -16,17 +16,17 @@ class TransactionsSection extends StatelessWidget {
     CompteManager compteManager = Provider.of(context).summon<CompteManager>();
     return Container(
         color: color3,
-        child: Observer<Compte>(
-          stream: compteManager.getCompte(compte.id),
-          builder: (context, compte) => ListView.separated(
+        child: Observer<List<Operation?>>(
+          stream: compteManager.getTransactions(compte.id),
+          builder: (context, transactions) => ListView.separated(
               separatorBuilder: (context, i) =>
                   const Divider(color: color2, height: 20),
-              itemCount: compte.operations.length,
+              itemCount: transactions.length,
               itemBuilder: (context, i) {
-                Operation op = compte.operations[i];
+                Operation? op = transactions[i];
                 return ListTile(
                   dense: true,
-                  leading: op.type == "DPT"
+                  leading: op?.type == "DPT"
                       ? const CircleAvatar(
                           backgroundColor: color2,
                           child: Icon(
@@ -37,12 +37,13 @@ class TransactionsSection extends StatelessWidget {
                           backgroundColor: Colors.yellow,
                           child: Icon(Icons.outbond, color: color3)),
                   subtitle: Text(
-                      "${DateFormat.yMd().format(DateTime.parse(op.date))} à ${DateFormat.Hms().format(DateTime.parse(op.date))}",
+                      "${DateFormat.yMd().format(DateTime.parse(op!.date))} à ${DateFormat.Hms().format(DateTime.parse(op.date))}",
                       style: const TextStyle(color: color2)),
-                  title: Text(compte.operations[i].description,
-                      style: const TextStyle(fontSize: 20)),
+                  title: op.payementsubject != null ? Text("${op.description} pour ${op.payementsubject?.nom} au service ${op.payementsubject?.service.nom}",
+                      style: const TextStyle(fontSize: 16)) : Text(op.description,
+                      style: const TextStyle(fontSize: 16)),
                   trailing: Text("${op.montant} FCFA",
-                      style: const TextStyle(fontSize: 18)),
+                      style: const TextStyle(fontSize: 14)),
                 );
               }),
           onError: (context, error) =>

@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 
 class ComptePage extends StatelessWidget {
   const ComptePage({Key? key, required this.id}) : super(key: key);
-  final int id;
+  final String id;
   @override
   Widget build(BuildContext context) {
     CompteManager compteManager = Provider.of(context).summon<CompteManager>();
